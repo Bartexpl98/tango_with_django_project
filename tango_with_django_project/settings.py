@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -117,7 +118,11 @@ USE_I18N = True
 USE_TZ = True
 
 # Login
+
 LOGIN_URL = 'rango:login'
+
+# Session
+#SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 
 # Media Files
